@@ -62,7 +62,7 @@ footer{background:linear-gradient(115deg,#18385f,#071326);color:#fff;border-top:
 @keyframes whatsapp-invite{50%{box-shadow:0 10px 48px #1bce6070,0 0 0 8px #1bce6010;translate:0 -3px}}
 .method-progress{height:2px;background:#18385f16;margin-top:35px;overflow:hidden;border-radius:10px}.method-progress i{display:block;height:100%;background:linear-gradient(90deg,#24486f,#1a7f8a);width:25%;transition:width .65s cubic-bezier(.22,.7,.25,1)}
 @media(max-width:1000px){.brand img{width:220px}.hero{padding-top:55px}.doctor-photo{align-self:center}}
-@media(max-width:680px){header{height:90px;padding:14px 6%;gap:15px}.brand img{width:185px}header .button{padding:12px;min-height:44px;font-size:11px;gap:7px}header .button .wa-icon{width:20px;height:20px}header .button .button-label{max-width:75px}.hero{padding-top:40px}.doctor-photo{width:100%;max-width:320px;border-radius:150px 150px 18px 18px}.doctor-photo img{height:auto}.doctor-photo>span{left:14px;bottom:18px;max-width:calc(100% - 28px);padding:9px 15px;font-size:9px}.button{font-size:14px}.mobile-cta .button{min-height:50px}footer .brand img{width:220px}}
+@media(max-width:680px){header{height:90px;padding:14px 6%;gap:15px}.brand img{width:185px}header .button{padding:12px;min-height:44px;font-size:11px;gap:7px}header .button .wa-icon{width:20px;height:20px}header .button .button-label{max-width:none;white-space:nowrap}.hero{padding-top:40px}.doctor-photo{width:100%;max-width:320px;border-radius:150px 150px 18px 18px}.doctor-photo img{height:auto}.doctor-photo>span{left:14px;bottom:18px;max-width:calc(100% - 28px);padding:9px 15px;font-size:9px}.button{font-size:14px}.mobile-cta .button{min-height:50px}footer .brand img{width:220px}}
 @media(max-width:370px){.brand img{width:160px}header .button{font-size:10px;padding:10px}.hero h1{font-size:38px}}
 @media(prefers-reduced-motion:reduce){.button.is-inviting{animation:none}.method-progress i{transition:none}}
 /* V06 — HIERARQUIA EDITORIAL E CABEÇALHO DE LANDING PAGE */
@@ -92,3 +92,12 @@ footer .copyright{grid-column:1/-1;grid-row:2;white-space:nowrap;text-align:cent
 @media(max-width:1000px){h1{font-size:49px}.precision{gap:5%}.precision h2{font-size:33px}}
 @media(max-width:680px){h1,.hero h1{font-size:42px;letter-spacing:-.045em}h1 .headline-secondary{font-size:.83em;margin-top:15px}h2{font-size:31px;line-height:1.25}.precision{grid-template-columns:1fr;gap:25px}.precision h2{font-size:31px}.intro{font-size:14px}.statement{font-size:21px}.final h2{font-size:46px}footer{display:flex;flex-wrap:wrap;gap:24px}footer .copyright{order:3;flex:0 0 100%;font-size:clamp(7px,2.05vw,11px);padding-top:20px;letter-spacing:-.01em}footer>a:last-child{font-size:10px}}
 @media(max-width:370px){.hero h1{font-size:37px}h2,.precision h2{font-size:28px}}
+
+/* Cabeçalho mobile: CTA em uma linha, com marca flexível. */
+@media(max-width:680px){
+ header{gap:12px}
+ header .brand{flex:1 1 auto;min-width:0;max-width:185px}
+ header .brand img{max-width:100%;height:auto}
+ header .button{flex:0 0 auto;padding:12px 10px}
+ header .button .button-label{max-width:none;white-space:nowrap}
+}
